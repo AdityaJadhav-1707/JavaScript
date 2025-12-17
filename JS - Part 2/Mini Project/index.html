@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="dark">
+    <div class="container">
+      <!-- Left Buttons -->
+      <div class="controls">
+        <!-- ADD NEW CARD (+ BUTTON) -->
+        <button id="addCardBtn" class="ctrl-btn add-btn">+</button>
+
+        <!-- UP (NEXT CARD) -->
+        <button id="prevBtn" class="ctrl-btn">▲</button>
+
+        <!-- DOWN (PREVIOUS CARD) -->
+        <button id="nextBtn" class="ctrl-btn">▼</button>
+      </div>
+
+      <!-- Card Stack -->
+      <div class="card-stack">
+        <div class="card" id="card"></div>
+        <div class="shadow-card"></div>
+        <div class="shadow-card"></div>
+      </div>
+
+      <!-- Color Themes -->
+      <div class="colors">
+        <div class="color" data-color="#000"></div>
+        <div class="color" data-color="#3D0073"></div>
+        <div class="color" data-color="#4A2C0A"></div>
+        <div class="color" data-color="#00AFAF"></div>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="formModal" class="modal">
+      <div class="modal-box">
+        <h2>Create New Card</h2>
+
+        <label>Image URL</label>
+        <input
+          id="imgUrl"
+          type="text"
+          placeholder="https://example.com/photo.jpg"
+        />
+
+        <label>Full Name</label>
+        <input id="fullName" type="text" placeholder="Enter full name" />
+
+        <label>Home Town</label>
+        <input id="homeTown" type="text" placeholder="Enter home town" />
+
+        <label>Bookings</label>
+        <input id="bookingCount" type="text" placeholder="e.g., 3 times" />
+
+        <button id="createNote" class="create-btn">Add Card</button>
+        <button id="closeModal" class="close-btn">Close</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

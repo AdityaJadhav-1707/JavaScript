@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1c1c1c;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.ctrl-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    background: #222;
+    color: #fff;
+}
+
+.add-btn {
+    background: #010d03;
+    color: #81ff5a;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Card stack */
+.card-stack {
+    position: relative;
+}
+.card {
+    width: 360px;
+    background: #222;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #333;
+    z-index: 3;
+    position: relative;
+    transition: 0.35s;
+}
+
+/* Shadows */
+.shadow-card {
+    width: 360px;
+    height: 200px;
+    background: #1a1a1a;
+    border-radius: 18px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    opacity: 0.4;
+}
+.shadow-card:nth-child(3) {
+    top: 40px;
+    opacity: 0.25;
+}
+
+/* Slide animation */
+.slide-out {
+    transform: translateY(30px);
+    opacity: 0;
+}
+.slide-in {
+    animation: slideIn 0.35s forwards;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Profile */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.profile img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.info {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Buttons */
+.actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.call-btn {
+    background: #fff;
+    padding: 10px 22px;
+    border-radius: 25px;
+    border: none;
+}
+.msg-btn {
+    padding: 10px 22px;
+    border-radius: 25px;
+    border: 1px solid #444;
+    background: transparent;
+    color: white;
+}
+
+/* Color Themes */
+.colors {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.color {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* MODAL — FIXED */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease;
+    z-index: 9999; /* MOST IMPORTANT FIX */
+}
+
+.modal-box {
+    background: #222;
+    padding: 30px;
+    width: 420px;
+    border-radius: 18px;
+}
+
+.modal-box input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #555;
+    background: #333;
+    color: #eee;
+}
+
+.create-btn,
+.close-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.create-btn {
+    background: #4ee84e;
+}
+.close-btn {
+    background: #700;
+}

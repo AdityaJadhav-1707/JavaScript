@@ -1,0 +1,111 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link rel="stylesheet" href="Project1.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>New Call</h2>
+      <form>
+        <label>Image URL</label>
+        <input
+          required
+          type="text"
+          placeholder="https://images.unsplash.com/photo-1764352104218-2d3a899ce36c?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfHRvd0paRnNrcEdnfHxlbnwwfHx8fHw%3D"
+        />
+
+        <label>Full Name</label>
+        <input required type="text" placeholder="Enter full name" />
+
+        <label>Home Town</label>
+        <input required type="text" placeholder="Enter home town" />
+
+        <label>Purpose</label>
+        <input
+          required
+          type="text"
+          placeholder="e.g., Quick appointment note"
+        />
+
+        <label>Category</label>
+        <label class="tag-checkbox">
+          <input required type="radio" name="Category" value="emergency" />
+          <span>Emergency</span>
+        </label>
+      </form>
+    </div>
+    <script src="Project1.js"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link rel="stylesheet" href="Project1.css" />
+  </head>
+  <body>
+    <button id="themeToggle">🌙 Dark Mode</button>
+
+    <div class="container">
+      <!-- Form Section -->
+      <div class="form-container">
+        <h2>New Call</h2>
+        <form id="userForm">
+          <label>Image URL</label>
+          <input id="imgInput" required type="text" />
+
+          <label>Full Name</label>
+          <input id="nameInput" required type="text" />
+
+          <label>Home Town</label>
+          <input id="townInput" required type="text" />
+
+          <label>Purpose</label>
+          <input id="purposeInput" required type="text" />
+
+          <label>Category</label>
+          <label class="tag-checkbox">
+            <input type="radio" name="Category" value="Emergency" required />
+            <span>Emergency</span>
+          </label>
+
+          <label class="tag-checkbox">
+            <input type="radio" name="Category" value="Emergency" required />
+            <span>Important</span>
+          </label>
+
+          <label class="tag-checkbox">
+            <input type="radio" name="Category" value="Emergency" required />
+            <span>Urgent</span>
+          </label>
+
+          <label class="tag-checkbox">
+            <input type="radio" name="Category" value="Emergency" required />
+            <span>No Rush</span>
+          </label>
+
+          <button type="submit" class="submit-btn">Create Note</button>
+        </form>
+        <button type="reset" class="closeForm">Close</button>
+      </div>
+      <div class="note-container"></div>
+
+      <!-- Live Preview Card -->
+      <div class="preview-card">
+        <img id="previewImg" src="" alt="Preview" />
+        <h3 id="previewName">Full Name</h3>
+        <p id="previewTown">Home Town</p>
+        <p id="previewPurpose">Purpose</p>
+        <span id="previewCategory" class="tag">Category</span>
+      </div>
+    </div>
+
+    <script src="Project1.js"></script>
+  </body>
+</html>
